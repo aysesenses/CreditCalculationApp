@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">CEPTEKREDİ</string>
+
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="tab_text_1">İhtiyaç Kredisi</string>
+    <string name="tab_text_2">Konut Kredisi</string>
+    <string name="tab_text_3">Taşıt Kredisi</string>
+    <string name="tab_text_4">Mevduat</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="teklifler">Teklifleri Göster</string>
+    <string name="vade">vade</string>
+    <string name="tutar">kredi tutarı</string>
+    <string name="hesap_tutari">Hesap Açılış Tutarı</string>
+    <string name="anapara">anapara</string>
+    <string name="arac_durumu">araç durumu</string>
+    <string name="gun">GÜN</string>
+    <string name="ay">AY</string>
+    <string name="tl">TL</string>
+    <string name="kazanc_hesapla">Kazancı Hesapla</string>
+    <string name="description_bank_logo">Bank Logo</string>
+    <string name="faiz">Faiz :</string>
+    <string name="odeme_plan">Ödeme Planı</string>
+    <string name="toplam_maaliyet">Toplam Maaliyet :</string>
+    <string name="aylik_taksit">Aylık Taksit</string>
+    <string name="vade_payment">Vade</string>
+    <string name="odenen_anapara">Ödenen Anapara</string>
+    <string name="odenen_faiz">Ödenen Faiz</string>
+    <string name="kalan_anapara">Kalan Anapara</string>
+    <string name="faiz_orani">Faiz Oranı :</string>
+    <string name="toplam_tutar">Toplam Tutar :</string>
+    <string name="net_kazanc">Net Kazanç</string>
+    <string name="yil">YIL</string>
+
+    <string-array name="personal_maturity_list">
+        <item>3</item>
+        <item>6</item>
+        <item>9</item>
+        <item>12</item>
+        <item>18</item>
+        <item>24</item>
+        <item>30</item>
+        <item>36</item>
+    </string-array>
+
+    <string-array name="house_maturity_list">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="transport_maturity_list">
+        <item>3</item>
+        <item>6</item>
+        <item>9</item>
+        <item>12</item>
+        <item>18</item>
+        <item>24</item>
+        <item>30</item>
+        <item>36</item>
+        <item>42</item>
+        <item>48</item>
+        <item>54</item>
+        <item>60</item>
+    </string-array>
+
+    <string-array name="transport_status">
+        <item>0 km taşıt alımı</item>
+        <item>2. el taşıt alımı</item>
+    </string-array>
+</resources>

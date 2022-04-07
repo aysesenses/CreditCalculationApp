@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="property"
+            type="com.aysesenses.creditcalculationapp.data.model.BankProperty" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/image_bank_logo"
+            load_image="@{property.bank_logo}"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:contentDescription="@string/description_bank_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/installment_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_medium"
+            android:textColor="@color/darkBlueTextColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtToplamMaaliyet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/total_cost_text"
+            app:textPrice="@{property.installment.toString()}"
+            tools:text="198" />
+
+        <TextView
+            android:id="@+id/bank_name_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:ellipsize="none"
+            android:fontFamily="@font/rubik_medium"
+            android:maxLines="2"
+            android:text="@{property.bank_name}"
+            android:textAlignment="viewStart"
+            android:textColor="@color/darkBlueTextColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/image_bank_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/image_bank_logo"
+            app:layout_constraintTop_toTopOf="@+id/image_bank_logo"
+            tools:text="Akbank" />
+
+
+        <TextView
+            android:id="@+id/bank_interest_transport_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/rubik_medium"
+            android:textSize="14sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtfaiz"
+            app:layout_constraintStart_toEndOf="@+id/txtfaiz"
+            app:textInterest="@{property.interest_house.toString()}"
+            tools:text="1.29" />
+
+        <TextView
+            android:id="@+id/txtfaiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="@string/faiz_orani"
+            app:layout_constraintStart_toStartOf="@+id/image_bank_logo"
+            app:layout_constraintTop_toBottomOf="@+id/image_bank_logo" />
+
+        <TextView
+            android:id="@+id/txtToplamMaaliyet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="@string/toplam_maaliyet"
+            app:layout_constraintStart_toStartOf="@+id/txtfaiz"
+            app:layout_constraintTop_toBottomOf="@+id/txtfaiz" />
+
+        <TextView
+            android:id="@+id/txtAylikTaksit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="@string/aylik_taksit"
+            app:layout_constraintBottom_toTopOf="@+id/installment_text"
+            app:layout_constraintEnd_toEndOf="@+id/installment_text" />
+
+        <TextView
+            android:id="@+id/total_cost_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:fontFamily="@font/rubik_medium"
+            app:layout_constraintBaseline_toBaselineOf="@+id/txtToplamMaaliyet"
+            app:layout_constraintEnd_toStartOf="@+id/installment_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@+id/txtToplamMaaliyet"
+            app:textPrice="@{property.total_cost.toString()}"
+            tools:text="125.253" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
